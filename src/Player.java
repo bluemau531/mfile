@@ -3,6 +3,7 @@ public class Player {
     private int balance;
     private String playerName;
 
+    // Construct Player Object
     Player(int balance, String playerName){
         this.balance = balance;
         this.playerName = playerName;
@@ -23,6 +24,7 @@ public class Player {
         return this.playerName;
     }
 
+    // Display Player Name and Balance
     public void displayInfo(){
         System.out.println("This is " + this.playerName +"'s balance: $" + this.balance);
     }

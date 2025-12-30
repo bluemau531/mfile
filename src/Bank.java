@@ -1,5 +1,6 @@
 public class Bank {
     
+    // Amount to be... (Deposited, Withdrawn, etc.)
     private int amount;
 
     public void Deposit(int amount, Player player){
@@ -13,29 +14,4 @@ public class Bank {
     }
 
     
-
-
-
-    // Bank(int amount, Player player){
-    //     this.amount = amount;
-    //     this.player = player;
-    // }
-
-    // public int Withdraw(int amount){
-    //     int playerBalance = this.player.getBalance();
-    //     this.player.setBalance(playerBalance - amount);
-    //     return player.getBalance();
-    // }
-
-    // public int Deposit(int amount){
-    //     int playerBalance = this.player.getBalance();
-    //     this.player.setBalance(playerBalance + amount);
-    //     return player.getBalance();
-    // }
-
-    // public void displayInfo(Player x){
-    //     System.out.println(x.displayInfo());
-    // }
-
-
 }
