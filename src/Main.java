@@ -1,5 +1,5 @@
 public class Main {
-    
+
     public static void main(String[] args) {
         
         // Creating our players
@@ -19,6 +19,16 @@ public class Main {
         for(Player player: players){
             player.displayInfo();
         }
+
+        // Referencing Property Class
+        Properties p = new Properties();
+        // Display Available Properties
+        p.displayInfo();
+
+        Board b = new Board();
+        b.displayInfo();
         
+        System.out.println(" " + b.rollDice());
+
     }
 }

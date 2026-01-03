@@ -1,4 +1,5 @@
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Properties {
@@ -6,29 +7,39 @@ public class Properties {
     // Create our HashMap
     public HashMap<String, Integer> properties = new HashMap<>();    
 
-    public static void main(String[] args) {
-        // A Hash map - is a data structure that stores key pair values,
-        // are memory efficient, and do not maintain order.
-        
-        Properties p = new Properties();
+    public Properties(){
+        // Creating Properties Key/Values
+        properties.put("Bikini Bottom", 50);
+        properties.put("Avenger's Tower", 1000);
+        properties.put("Yoda's Bar & Clubhouse", 5000);
+        properties.put("Dog City the House", 200);
+        properties.put("McDonald's Headquarters", 50000);
+    }
 
-        p.properties.put("Bikini Bottom", 50);
-        p.properties.put("Avenger's Tower", 1000);
-        p.properties.put("Yoda's Bar & Clubhouse", 5000);
-        p.properties.put("Dog City the House", 200);
-        p.properties.put("McDonald's Headquarters", 50000);
+    public String getProperty(){
+        return "The price is: $ " + properties.get("Bikini Bottom");
+    }
 
-        for(String key: p.properties.keySet()){
-            System.out.println(key + " $" + p.properties.get(key));
+    public ArrayList<String> getAllProperties(){
+        ArrayList<String> list = new ArrayList<String>();
+        for(String key: properties.keySet()){
+           list.add(key);
         }
-        
-        System.out.println(p.properties.containsKey("Bikini Bottom"));
-        System.out.println(p.properties.containsValue(10100));
-        System.out.println(p.properties.size());
+
+        return list;
+
+    }
+
+    public void displayInfo(){
+        for(String key: properties.keySet()){
+            System.out.println(key + " $" + properties.get(key));
+        }
     }
 
 }
 
+// A Hash map - is a data structure that stores key pair values,
+// are memory efficient, and do not maintain order.
 
 //HashMap Cheat Sheet
 //------------------------------------------------------------------------
